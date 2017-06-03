@@ -1,0 +1,39 @@
+html, body{
+  /*background-image: url("images/pexels-photo-172282.jpeg");*/
+  background-size: cover;
+  }
+
+.container{
+  background-color: silver;
+  max-width: 940px;
+  box-shadow: inset 5px 5px 15px black, inset -5px -5px 15px black;
+  border-radius: 5px;
+}
+
+
+.values {
+  height: 9em;
+  text-align: center;
+  background-color: dimgray;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: inset 1px 1px 5px black, inset -1px -1px 5px black;
+}
+
+.vertical-align{
+  display: flex;
+  align-items: center;
+}
+
+#val01, #val02{
+  color: goldenrod;
+  font-size: 7em;
+  text-align: right;
+  padding-right: 100px;
+}
+
+
+button{
+  width: 100%;
+  margin: 20px 0;
+}

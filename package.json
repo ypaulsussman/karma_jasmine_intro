@@ -1,0 +1,17 @@
+{
+  "name": "weekend_challenge",
+  "version": "1.0.0",
+  "description": "This app is primarily & hopefully an opportunity to practice unit testing with Karma/Jasmine.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "Y Paul",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "jquery": "^3.2.0"
+  }
+}
