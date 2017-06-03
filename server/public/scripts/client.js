@@ -6,13 +6,11 @@ $(document).ready(function() {
 });
 
 function addEventListener() {
-  $('#integerList').on('keydown', function() {
-    console.log('keydown triggered');
+  $('#integerList').on('keyup', function() {
     validateList();
   });
 
   $('#integerList').on('paste', function() {
-    console.log('paste triggered');
     validateList();
   });
 
@@ -27,9 +25,7 @@ function addEventListener() {
 function validateList() {
   integerList = $("#integerList").val();
   for (var i = 0; i < integerList.length; i++) {
-    console.log('we on: ', integerList[i]);
-    console.log("it's a: ", typeof integerList[i]);
-    if (!validateCharacter(integerList[i])) {
+    if (validateCharacter(integerList[i])) {
       $('#datatypeWarning').show();
       $('#submitButton').attr('disabled',true);
       break;
@@ -40,7 +36,7 @@ function validateList() {
 }
 
 function validateCharacter(character) {
-  if (character===/[0-9]/ || character===',') {
+  if (character !== ',' && isNaN(parseInt(character, 10))) {
     return true;
   } else {
     return false;
