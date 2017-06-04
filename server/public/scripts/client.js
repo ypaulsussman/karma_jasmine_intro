@@ -27,7 +27,7 @@ function addEventListener() {
 function validateList() {
   integerList = $("#integerList").val();
   for (var i = 0; i < integerList.length; i++) {
-    if (validateCharacter(integerList[i])) {
+    if (!validateCharacter(integerList[i])) {
       $('#datatypeWarning').show();
       $('#submitButton').attr('disabled',true);
       break;
@@ -38,10 +38,10 @@ function validateList() {
 }
 
 function validateCharacter(character) {
-  if (character !== ',' && character !== '-' && isNaN(parseInt(character, 10))) {
-    return true;
-  } else {
+    if (character !== ',' && character !== '-' && !Number.isInteger(parseFloat(character))) {
     return false;
+  } else {
+    return true;
   }
 }
 

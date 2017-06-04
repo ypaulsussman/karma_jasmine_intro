@@ -14,7 +14,15 @@ module.exports = function(config) {
 
 
     // list of files / patterns to load in the browser
+    //@NOTE for future Y Paul: you can't test the server-side js b/c "require"
+    //isn't understood by the browser: http://bit.ly/2rxbVcd http://bit.ly/2sr4142
     files: [
+      // './node_modules',
+      // './server/app.js',
+      // './server/modules/*.js',
+      './server/public/vendors/*',
+      './server/public/scripts/*.js',
+      './tests/*.js'
     ],
 
 
@@ -64,5 +72,5 @@ module.exports = function(config) {
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
-  })
-}
+  });
+};
