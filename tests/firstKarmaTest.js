@@ -41,8 +41,8 @@ describe('validateCharacter test', function() {
     expect(outcome).toEqual(false);
   });
 
-  it('rejects numbers', function() {
-    var param = 3;
+  it('rejects strings of numbers', function() {
+    var param = '3';
     var outcome = validateCharacter(param);
     expect(outcome).toEqual(true);
   });
